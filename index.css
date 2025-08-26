@@ -13,7 +13,7 @@ body {
 /* Layout */
 
 .form-container {
-  border: 1px solid red;
+  border: 2px solid black;
   position: absolute;
   top: 10%;
   transform: translateY(-50%);
@@ -22,10 +22,10 @@ body {
   display: flex;
   width: 50%;
   padding: 20px;
+  border-radius: 20px;
 }
 
 .form-left {
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -34,14 +34,13 @@ body {
 }
 
 .form-right {
-  border: 1px solid green;
   padding: 10px;
   width: 50%;
   gap: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 /* Elements left */
@@ -63,3 +62,38 @@ body {
 }
 
 /* Elements right */
+
+.progress-bar {
+  margin-top: 30px;
+  border-left: 3px solid black;
+  border-right: 3px solid lightgray;
+  border-top: 3px solid black;
+  border-bottom: 3px solid lightgray;
+  padding: 20px;
+  border-radius: 90%;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+#profile-completness {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.profile-tasks {
+  background-color: lightgray;
+  height: 100%;
+  width: 80%;
+  border-radius: 20px;
+  padding: 10%;
+}
+
+.task {
+  font-size: 0.8rem;
+  line-height: 20px;
+}
+
+.task-completed {
+  color: grey;
+  text-decoration: line-through;
+}
