@@ -75,9 +75,14 @@ body {
 
 .error-message {
   font-size: 0.8rem;
-  margin-top: -5px;
+  margin-top: 5px;
   color: red;
   display: none;
+}
+
+.btn-view {
+  color: black;
+  align-self: flex-end;
 }
 
 /* Elements right */
@@ -123,6 +128,42 @@ body {
   border: 3px solid black;
 }
 
-input:user-invalid + .error-message {
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px; /* spacing between fields */
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* make space for the icon */
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.input-wrapper .btn-view {
+  position: absolute;
+  right: 10px;
+  top: 80%;
+  transform: translateY(-80%);
+  cursor: pointer;
+  color: gray;
+}
+
+.input-wrapper .error-message {
+  display: none;
+  font-size: 0.8rem;
+  color: red;
+  margin-top: 5px;
+  position: absolute;
+  left: 0;
+  bottom: -20px; /* fixed below the input box */
+}
+
+/* Show error when invalid */
+
+.input-wrapper input:user-invalid ~ .error-message,
+.input-wrapper input:invalid:focus ~ .error-message {
   display: block;
 }
