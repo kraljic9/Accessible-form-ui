@@ -7,31 +7,55 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="form-container">
+    <form class="form-container" method="post">
       <div class="form-left">
-        <label for="name">Full name</label>
-        <input
-          type="text"
-          placeholder="What should we call you?"
-          class="input-left"
-        />
+        <div class="top-inputs">
+          <label for="name">Full name</label>
+          <input
+            type="text"
+            placeholder="What should we call you?"
+            class="input-left"
+            required
+          />
+          <span class="error-message">Please enter a valid name</span>
 
-        <label for="email">Email</label>
-        <input
-          type="email"
-          placeholder="example@gmail.com"
-          class="input-left"
-        />
+          <label for="email">Email</label>
+          <input
+            type="email"
+            placeholder="example@gmail.com"
+            class="input-left"
+            required
+          />
+          <span class="error-message">Please enter a valid email</span>
+        </div>
 
-        <label for="password">Enter Password</label>
-        <input type="password" placeholder="XXXXXXXX" class="input-left" />
-        <i class="btn-view"></i>
+        <div class="bottom-inputs">
+          <label for="password">Enter Password</label>
+          <input
+            type="password"
+            placeholder="XXXXXXXX"
+            class="input-left"
+            id="password"
+            required
+            minlength="5"
+          />
+          <span class="error-message">Please enter a valid password</span>
+          <i class="btn-view"></i>
 
-        <label for="confirm">Confirm Password</label>
-        <input type="password" placeholder="XXXXXXXX" class="input-left" />
-        <i class="btn-view"></i>
+          <label for="confirm">Confirm Password</label>
+          <input
+            type="password"
+            placeholder="XXXXXXXX"
+            class="input-left"
+            id="password-confirm"
+            required
+            minlength="5"
+          />
+          <span class="error-message">Please confirm the password</span>
+          <i class="btn-view"></i>
+        </div>
 
-        <button class="main-button">Update Profile</button>
+        <button class="main-button" type="submit">Update Profile</button>
       </div>
 
       <div class="form-right">
@@ -45,6 +69,8 @@
           <p class="task">Invite your Friends</p>
         </div>
       </div>
-    </div>
+    </form>
+
+    <link rel="stylesheet" href="index.js" />
   </body>
 </html>
